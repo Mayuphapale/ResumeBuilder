@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+
+<body style="background-color:  #3090c7;">
+    <div class="container">
+        <nav>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="fas fa-bars"></i>
+            </label>
+            <label class="logo"><img src="{{ url_for('static', filename='images/logo1.png') }}" width="120" height="80"></label>
+            <ul>
+                <li><a href="{{ url_for('step') }}">Create My Resume</a></li>
+                <li><a href="{{ url_for('template') }}">Resume Templates</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact</a></li>
+                <li><a href="{{ url_for('login') }}">Log in</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="row">
+        <div class="col-1">
+            <img src="{{ url_for('static', filename='images/Bmiddle.png') }}" class="img">
+        </div>
+        <div class="col-2">
+            <h1>Design Your Resume <br> & Prove yourself</h1>
+            <a href="{{ url_for('steps') }}" class="btn">BUILD MY RESUME</a>
+        </div>
+    </div>
+</body>
+
+</html>

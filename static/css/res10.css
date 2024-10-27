@@ -1,0 +1,180 @@
+/* body{
+    background-color: aquamarine;
+} */
+
+
+/* #resume-form{
+ display: none;
+}
+
+#resume-template{
+    display:none;
+} */
+
+.myimg {
+    /* border:1px solid red; */
+    border-radius: 50%;
+    width: 200px;
+}
+
+.background {
+    background-color: #123456;
+}
+
+.contact ul {
+    text-align: center;
+    padding-right: 120px;
+    margin-left: 90px;
+}
+
+.col-md-4 {
+    color: white;
+}
+
+.prbtn {
+    background-color: rgb(228, 235, 238);
+    font-size: 25px;
+    padding: 10px 10px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0);
+    transition: .5s;
+}
+
+.prbtn:hover {
+    background-color: #123456;
+    color: cornsilk;
+}
+
+@media print {
+    body * {
+        visibility: hidden;
+    }
+    #resume-template * {
+        visibility: visible;
+    }
+    #size * {
+        visibility: hidden;
+    }
+    #font * {
+        visibility: hidden;
+    }
+    #resume-form * {
+        visibility: hidden;
+    }
+    #rowbg * {
+        display: none;
+    }
+    #printT * {
+        display: none;
+    }
+}
+
+.container .buttons {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+}
+
+.container .buttons .btn {
+    padding: 0 10px;
+    display: inline-flex;
+    background: #ddd;
+    color: #fff;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.container .buttons .btn.active {
+    background: #444;
+}
+
+.container .buttons .btn:nth-child(2) {
+    font-size: 1.5em;
+}
+
+.container .buttons .btn:nth-child(3) {
+    font-size: 2em;
+}
+
+
+/* .container .row */
+
+.container .buttons {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin-bottom: 20px;
+}
+
+.container .buttons .btn {
+    padding: 7px 13px;
+    display: inline-flex;
+    background: #ddd;
+    margin-left: 10px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.container .button .btns {
+    background: rgb(122, 25, 25);
+    font-family: 'Modern';
+}
+
+.container .button .btns:nth-child(2) {
+    padding: 5px;
+    font-family: 'Modern';
+}
+
+.container .button .btns:nth-child(3) {
+    padding: 5px;
+    font-family: 'YU Gothic';
+}
+
+.container .button .btns:nth-child(4) {
+    padding: 5px;
+    font-family: 'Nirmala UI';
+}
+
+.container .button .btns:nth-child(5) {
+    padding: 5px;
+    font-family: 'Comic Sans MS';
+}
+
+.container .button .btns:nth-child(6) {
+    padding: 5px;
+    font-family: 'Roman';
+}
+
+.button1 .btns1 {
+    background: rgb(122, 25, 25);
+    color: white;
+}
+
+
+/* font family end */
+
+@media only screen and (max-width:700px) {
+    #resume-form {
+        width: 400px;
+    }
+    #resuem-template {
+        width: 10cm;
+        height: 20cm;
+        box-sizing: border-box;
+    }
+}
+
+
+/* @media(min-width: 768px){
+    .col-md-4 {
+    flex: 0 0 33.33333%;
+     flex-grow: 0;
+     flex-shrink: 0;
+     flex-basis: 33.3333%;
+     max-width: 33.33333%;
+}
+} */

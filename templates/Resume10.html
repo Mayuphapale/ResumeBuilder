@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="static/css/res10.css">
+
+    <title>Resume10</title>
+</head>
+
+<body>
+    <!-- here html starts -->
+
+    <div class="container" id="resume-form">
+        <h1 class="text-center my-2">Resume Generater</h1>
+        <p class="text-center">By Quick Resume</p>
+
+        <div class="row">
+
+            <div class="col-md-6">
+                <!-- first col -->
+                <h3>Personal Information</h3>
+
+                <!-- name -->
+                <div class="form-group">
+                    <label for="namefield">Your Name</label>
+                    <input type="text" id="namefield" placeholder="Enter Name" class="form-control">
+                </div>
+                <!-- contact -->
+                <div class="form-group mt-3">
+                    <label for="contactfield">Your Contact</label>
+                    <input type="text" id="contactfield" placeholder="Enter here" class="form-control">
+                </div>
+
+                <!-- email id -->
+                <div class="form-group mt-3">
+                    <label for="emailfield">Your Email Id</label>
+                    <input type="text" id="emailfield" placeholder="Enter here" class="form-control">
+                </div>
+
+
+                <!-- address -->
+                <div class="form-group mt-3">
+                    <label for="addressfield">Your Address</label>
+                    <textarea id="addressfield" placeholder="Enter Your Addresss" class="form-control" rows="5"></textarea>
+                </div>
+
+                <!-- photo -->
+                <div class="form-group mt-4">
+                    <label for="">Select your photo</label>
+                    <input id="imgfield" type="file" class="form-control">
+                </div>
+
+                <!-- links -->
+
+                <p class="text-secondary my-3">Important Links</p>
+                <div class="form-group mt-3">
+                    <label for="fbfield">Facebook link</label>
+                    <input type="text" id="fbfield" placeholder="Enter here" class="form-control">
+                </div>
+
+                <div class="form-group mt-3">
+                    <label for="instafield">Instagram</label>
+                    <input type="text" id="instafield" placeholder="Enter here" class="form-control">
+                </div>
+
+                <div class="form-group mt-3">
+                    <label for="Linkedfield">LinkedIn</label>
+                    <input type="text" id="linkedfield" placeholder="Enter here" class="form-control">
+                </div>
+
+                <!-- hobbise -->
+                <div class="form-group mt-3" id="hb">
+                    <label for="">Hobbies</label>
+                    <textarea placeholder="Enter here" class="form-control hbfield" rows="3"></textarea>
+
+                    <div class="container text-center mt-3" id="hbaddbutton">
+                        <button onclick="addnewhbfield()" class="btn btn-primary btn-sm">Add</button>
+                    </div>
+
+                </div>
+
+                <!-- skill -->
+                <div class="form-group mt-3" id="lsk">
+                    <label for="">Skill</label>
+                    <textarea placeholder="Enter here" class="form-control lskfield" rows="3"></textarea>
+
+                    <div class="container text-center mt-3" id="lskaddbutton">
+                        <button onclick="addnewlskfield()" class="btn btn-primary btn-sm">Add</button>
+                    </div>
+
+                </div>
+
+
+
+            </div>
+
+            <div class="col-md-6">
+                <!-- second col -->
+                <h3>Professional Information</h3>
+
+                <div class="form-group mt-3">
+                    <label for="">Objective</label>
+                    <textarea id="objectivefield" placeholder="Enter here" class="form-control" rows="5"></textarea>
+                </div>
+
+                <div class="form-group mt-3" id="we">
+                    <label for="">Work Experience</label>
+                    <textarea placeholder="Enter here" class="form-control wefield" rows="3"></textarea>
+
+                    <!-- new textarea -->
+
+                    <div class="container text-center mt-3" id="weaddbutton">
+                        <button onclick="addnewwefield()" class="btn btn-primary btn-sm">Add</button>
+                    </div>
+
+                </div>
+
+
+                <div class="form-group mt-3" id="aq">
+                    <label for="">Academin Qualification</label>
+                    <textarea placeholder="Enter here" class="form-control eqfield" rows="3"></textarea>
+
+                    <div class="container text-center mt-3" id="aqaddbutton">
+                        <button onclick="addnewaqfield()" class="btn btn-primary btn-sm">Add</button>
+                    </div>
+
+                </div>
+
+                <div class="form-group mt-3" id="sk">
+                    <label for="">Achivements</label>
+                    <textarea placeholder="Enter here" class="form-control skfield" rows="3"></textarea>
+
+                    <div class="container text-center mt-3" id="skaddbutton">
+                        <button onclick="addnewskfield()" class="btn btn-primary btn-sm">Add</button>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+       <div class="container mt-5 text-center" id="printT">
+
+                <button onclick="downloadResume()" class="btn btn-primary btn-lg">Download</button>
+
+
+            </div>
+    </div>
+
+
+    <!-- resume tamplet -->
+
+
+    <div class="container" id="resume-template">
+
+        <div class="container">
+            <div class="1row" id="rowbg" style="background-color: rgb(126, 90, 161); width: 55%; border-radius: 30px; margin-left: 390px;">
+
+
+                <div class="buttons" id="size" style="padding:10px; margin-left: -50px; padding-left: 1.5rem 1.25rem;">
+
+                    <span class="btn active" onclick="smallA()" style="margin-bottom: 21px;">A</span>
+                    <span class="btn " onclick="mediumA()" style="margin-bottom: 21px;">A</span>
+                    <span class="btn " onclick="bigA()" style="margin-bottom: 21px;">A</span>
+                    <br>
+
+
+
+                    <form style=" margin-left: 20px; margin-bottom: 20px;">
+                        <h4 style="margin-left: 40px;"> color</h4>
+                        <select class="button1" onchange="handleOnChangeEvent(this.value)" style="border-radius: 20px; font-size: 20px; height: 40px; width: 140px; color: gray;">
+                        <option  value="" >color</option>
+                        <option  class="btns1" value="#737CA1">slate blue gray</option>
+                        <option  class="btns1" value="#E84A5F">Red</option>
+                        <option   class="btns1" value="#357EC7">Blue</option>
+                        <option  class="btns1" value="#3EA99F">Light sea green</option>
+                        <option  class="btns1" value="#C5908E">Rose</option>
+                    </select>
+
+                    </form>
+
+                    <form style="margin-left: 10px; ">
+                        <h4 style="margin-left: 27px;">font style</h4>
+                        <select class="button" id="font" onclick="changeFont(this.value)" style=" height: 40px; margin-bottom: 20px; border-radius: 10px; font-size: 20px; color: gray;">
+                <option value="">select style</option>
+                <option class="btns " >Modern</option>
+                <option class="btns" >YU Gothic</option>
+                <option class="btns" >Nirmala UI</option>
+                <option class="btns" >Comic Sans MS</option>
+                <option class="btns">Roman</option>
+                </select>
+                    </form>
+
+
+
+
+
+
+
+
+                </div>
+
+            </div>
+
+
+            <div class="row" id="text11">
+                <div class="col-md-4 text-center py-5 background" id="text13">
+                    <!-- first col -->
+
+                    <img src="https://thumbs.dreamstime.com/b/user-icon-vector-female-person-symbol-profile-avatar-sign-glyph-pictogram-illustration-user-icon-vector-female-person-symbol-104605111.jpg" class="img-fluid myimg" id="imgT" />
+
+                    <div class="row text-center ">
+                        <!-- <p>sector 37 sarojini nagar, India</p> -->
+                        <p id="nameT1">ANTONIO JOHNSON</p>
+                        <p id="contactT">+91 581982326</p>
+                      
+                        <p id="emailT">dikshamonde19@gmail.com</p>
+                        <hr/>
+
+                        <p style="font-size: large;"><a id="fbT" href="#1">www.facebook.com/</a></p>
+                       
+                        <p style="font-size: large;"><a id="linkedT" href="#1">www.linkedin.com/feed/</a></p>
+                        <hr/>
+
+                        <div class="contact">
+                            <h1 style="font-size: 25px" style="font-weight: 400">Hobbies</h1>
+                            <ul id="hbT">
+                                <li>Team sports</li>
+                                <li>Painting</li>
+                                <li>Blogging</li>
+                                <li>reading</li>
+                            </ul>
+                            <hr/>
+
+                            <h1 style="font-size: 25px" style="font-weight: 400">Skill</h1>
+                            <ul id="lskT">
+                                <li>Team work</li>
+                                <li>Problem Solving</li>
+                                <li>Object-Oriented Design</li>
+                                <li>Communication Skills.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="col-md-6 py-5">
+                    <!-- second col -->
+                    <h3 id="nameT2" class="text-center">
+                        ANTONIO JOHNSON</h3>
+
+
+
+                    <!-- work Experience -->
+
+                    <div class="mt-5">
+                        <div class="header">
+                            <h3>Work Experience</h3>
+                        </div>
+                        <div class="body">
+                            <ul id="weT">
+                                <li>Work experience is time spent in a workplace learning about a job role, a company or a career sector. Most work experience is unpaid though there are some types of opportunities where you can earn money.</li>
+
+
+                                
+
+
+                                <li>Work experience is time spent in a workplace learning about a job role, a company or a career sector. Most work experience is unpaid though there are some types of opportunities where you can earn money.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- acadmic Qualification -->
+                    <div class="mt-5">
+                        <div class="header ">
+                            <h3>Acadmic Qualification</h3>
+                        </div>
+                        <div class="body">
+                            <ul id="aqT">
+                                
+
+                                <li>Educational qualifications refer to certificates, diplomas, or degrees a person has received certifying that he or she has successfully completed an education program.</li>
+
+
+                                <li>The term educational qualifications is a more general term than academic qualifications. It sometimes includes both academic and professional qualifications.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+                    <div class=" mt-5">
+                        <div class="header">
+                            <h3>Objective</h3>
+                        </div>
+                        <div class="body">
+                            <p id="objectiveT">Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum tempore porro ullam doloremque eaque dolorem voluptates delectus est voluptate molestiae libero odio nemo quisquam magnam deleniti voluptas, assumenda doloribus.
+                                Cumque, numquam? Commodi doloribus, placeat optio laudantium perferendis tenetur, fugit p>
+                        </div>
+                    </div>
+
+
+                    <!-- experience -->
+                    <div class="mt-5">
+                        <div class="header">
+                            <h3>Achivements</h3>
+                        </div>
+                        <div class="body">
+                            <ul id="skT">
+                               
+
+                                <li>Keep on improving my knowledge and skills regarding Software Quality which I could measure this improvement is next big achievement.</li>
+
+
+                                <li>Be able to guide the team which direction we should go, and properly shape the team toward right direction is also my great achievement.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+
+            </div>
+
+
+            <div class="container mt-5 text-center" id="printT">
+
+                <button onclick="downloadResume()" class="btn btn-primary btn-lg">Download</button>
+
+
+            </div>
+
+
+
+            <script>
+                let buttons = document.querySelector('.buttons');
+                let btn = document.querySelectorAll('.btn');
+                for (var i = 0; i < btn.length; i++) {
+                    btn[i].addEventListener('click', function() {
+                        let current = document.getElementsByClassName('active');
+                        current[0].className = current[0].className.replace("active", "");
+                        this.className += " active";
+                    })
+                }
+            </script>
+
+
+
+
+
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+            <script src="/static/js/res10.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+</body>
+
+</html>

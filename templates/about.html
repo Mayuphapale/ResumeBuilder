@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>about us</title>
+
+    <style type="text/css">
+        .intro h1 {
+            text-align: right;
+            padding-right: 400px;
+            margin-top: -320px;
+            text-shadow: 2px 2px 4px grey;
+        }
+        
+        @media screen and (max-width:600px) {
+            .img {
+                width: 100px;
+                margin-left: -20px;
+            }
+            .intro {
+                margin-top: 260px;
+                margin-left: -600px;
+            }
+            .h1 {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="font-size:50px; text-align: center;">About Us</h1>
+    <img src="{{ url_for('static', filename='images/about.jpeg') }}" style="padding-top: -20px;">
+    <div class="intro">
+        <p style="font-size: 29px; margin-left: 700px; margin-top: -300px; ">
+            Our main purpose is to make your work easy and simple. The great thing about QuickResume is that you can create variants of a master resume. We are availing you with multiple features which are very relevant and easy to use.
+        </p>
+    </div>
+</body>
+
+</html>

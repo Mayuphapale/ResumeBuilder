@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/front.css') }}">
+</head>
+
+<body style="background-color:  #3090c7;">
+    <div class="container">
+        <div class="navbar">
+            <img src="{{ url_for('static', filename='images/logo1.png') }}" class="logo" width="140" height="100">
+            <nav>
+                <ul>
+                    <li><a href="{{ url_for('step') }}">Create My Resume</a></li>
+                    <li><a href="{{ url_for('template') }}">Resume Templates</a></li>
+                    <li><a href="{{ url_for('contact') }}">Contact</a></li>
+                    <li><a href="{{ url_for('login') }}">Login</a></li>
+                </ul>
+            </nav>
+            <img src="{{ url_for('static', filename='images/menu1.jpg') }}" class="menu" width="70" height="70">
+        </div>
+        <div class="row">
+            <div class="col-1">
+                <img src="{{ url_for('static', filename='images/Bmiddle.png') }}" class="img">
+            </div>
+            <div class="col-2">
+                <h1>Design Your Resume <br> & Prove yourself</h1>
+                <a href="{{ url_for('steps') }}" class="btn">BUILD MY RESUME</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

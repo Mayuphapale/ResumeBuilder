@@ -1,0 +1,91 @@
+/* Free of Cost
+There are several resume builders available online for free. Check their templates and themes to see which one resonates most with your style.
+
+Time Saver
+The time spent preparing your resume can often be better spent on networking or additional training courses that enhance your job skills.
+
+User-Friendly
+Resume builders have vibrant, eye-catching, customizable templates, and they come with various layouts.
+
+Easy to Update
+The great thing about a resume builder is that you can create variants of a master resume.
+
+Access from Anywhere
+If you are on the road it’s simple for you to access the resume builder, update your resume
+
+Easy download
+you can easily download your resume there is no any restriction and it is fully free */
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+}
+
+.container .row {
+    width: 85%;
+    margin: auto;
+}
+
+.container .row .heading-section {
+    width: 60%;
+    text-align: center;
+    margin: auto;
+}
+
+.container .row .heading-section h1 {
+    padding-top: 30px;
+    font-size: 20px;
+}
+
+.container .row .heading-section p {
+    margin-top: 15px;
+    font-size: 17px;
+    line-height: 1.5;
+}
+
+.content-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.content-section .card {
+    flex: 1;
+    margin: 40px 20px;
+}
+
+.content-section .card h1 {
+    font-size: 30px;
+}
+
+.content-section .card img {
+    width: 30px;
+    height: 40px;
+}
+
+.content-section .card p {
+    margin-top: 10px;
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+@media screen and (max-width:600px) {
+    .content-section {
+        flex-direction: column;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+    }
+    .card .img {
+        text-align: center;
+    }
+}

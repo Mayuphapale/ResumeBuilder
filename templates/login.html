@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-pn3g5wUBemHcM+zG8eN5lEBR6V5q4MzYr1OZjJvN9h5pb+mqlQktw0OZxMoaPQe89rA1DAGbXnX+oI5L9j3OXQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="{{ url_for('static', filename='images/logo1.png') }}" alt="Logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="{{ url_for('step') }}">Create My Resume</a></li>
+                <li><a href="{{ url_for('template') }}">Resume Templates</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact</a></li>
+                <li><a href="{{ url_for('login') }}" class="btn-outline">Log in</a></li>
+            </ul>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <div class="card">
+                <div class="inner-box" id="card">
+                    <div class="card-front">
+                        <h2>LOGIN</h2>
+                        <form id="loginForm">
+                            <input type="email" class="input-box" placeholder="Enter your Email Id" required>
+                            <input type="password" class="input-box" placeholder="Password" required>
+                            <button type="submit" class="submit-btn">Submit</button>
+                            <input type="checkbox"><span>Remember Me</span>
+                        </form>
+                        <button type="button" class="btn" onclick="openRegister()">I'm New Here</button>
+                        <a href="{{ url_for('forgot') }}">Forgot Password</a>
+                    </div>
+                    <div class="card-back">
+                        <h2>REGISTER</h2>
+                        <form id="registerForm">
+                            <input type="text" class="input-box" id="name" placeholder="Your Full Name" required>
+                            <input type="email" class="input-box" id="email" placeholder="Enter your Email Id" required>
+                            <input type="password" class="input-box" id="password" placeholder="Password" required>
+                            <!-- <input type="password" class="input-box" id="confirmPassword" placeholder="Confirm Password" required> -->
+                            <input type="tel" id="phone" class="input-box" name="phone" placeholder="Contact number" pattern="\d{10}" required>
+                            <button type="submit" class="submit-btn">Submit</button>
+                           
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script>
+        var card = document.getElementById("card");
+
+        function openRegister() {
+            card.style.transform = "rotateY(-180deg)";
+        }
+
+        function openLogin() {
+            card.style.transform = "rotateY(0deg)";
+        }
+
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+            this.classList.toggle('active');
+        });
+
+        // Form Validation
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            if (validateLoginForm()) {
+                alert('Login form is valid');
+                // Proceed with form submission
+            }
+        });
+
+        document.getElementById('registerForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            if (validateRegisterForm()) {
+                alert('Register form is valid');
+                // Proceed with form submission
+            }
+        });
+
+        function validateLoginForm() {
+            const email = document.querySelector('#loginForm input[type="email"]').value;
+            const password = document.querySelector('#loginForm input[type="password"]').value;
+
+            if (!validateEmail(email)) {
+                alert('Please enter a valid email address');
+                return false;
+            }
+
+            if (!validatePassword(password)) {
+                alert('Password must be at least 6 characters long, contain at least one uppercase letter, one number, and one special character');
+                return false;
+            }
+
+            return true;
+        }
+        function validateRegisterForm() {
+    const name = document.querySelector('#registerForm input[type="text"]').value;
+    const email = document.querySelector('#registerForm input[type="email"]').value;
+    const password = document.querySelector('#registerForm input[type="password"]').value;
+    // const confirmPassword = document.querySelector('#registerForm input[type="password"]:nth-of-type(2)').value;
+    const phone = document.querySelector('#registerForm input[type="tel"]').value;
+
+    if (!validateName(name)) {
+        alert('Name should contain only alphabets');
+        return false;
+    }
+
+    if (!validateEmail(email)) {
+        alert('Please enter a valid email address');
+        return false;
+    }
+
+    if (!validatePassword(password)) {
+        alert('Password must be at least 6 characters long, contain at least one uppercase letter, one number, and one special character');
+        return false;
+    }
+
+    // if (password !== confirmPassword) {
+    //     alert('Passwords do not match');
+    //     return false;
+    // }
+
+    if (!validatePhone(phone)) {
+        alert('Please enter a valid phone number in the format XXX-XX-XXX');
+        return false;
+    }
+
+    return true;
+}
+
+// Helper Functions
+function validateName(name) {
+    const re = /^[A-Za-z\s]+$/;
+    return re.test(name);
+}
+
+function validateEmail(email) {
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return re.test(email);
+}
+
+function validatePassword(password) {
+    const re = /^(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{6,}$/;
+    return re.test(password);
+}
+
+function validatePhone(phone) {
+    const re = /^\d{10}$/;
+    return re.test(phone);
+}
+
+
+    </script>
+</body>
+</html>

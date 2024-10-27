@@ -1,0 +1,251 @@
+/* #resume-form { */
+    /* display: none; */
+/* }
+
+#resume-template { */
+    /* display: ; */
+/* } */
+
+.img1 {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+}
+
+.background {
+    background-color: #C19A6B;
+}
+
+.row h1 {
+    height: 150px;
+    padding-bottom: 10px;
+}
+
+.content h3 {
+    text-align: center;
+    padding-right: 50px;
+    margin-bottom: 50px;
+}
+
+.content p {
+    text-align: center;
+    padding-right: 50px;
+}
+
+.content ul {
+    padding-right: 120px;
+    text-align: center;
+    margin-left: 50px;
+}
+
+
+
+.child {
+    float: left;
+    width: 50%;
+    padding: 5px;
+}
+
+.container .child {
+    float: left;
+    width: 50%;
+}
+
+
+/* post  */
+
+.container p {
+    margin-bottom: 10px;
+}
+
+.content ul {
+    padding-bottom: 10px;
+    padding-top: -20px;
+}
+
+ul {
+    list-style-type: square;
+}
+
+.hr {
+    height: 5%;
+}
+
+.container .button {
+    width: 1200px;
+    flex-direction: row;
+    margin: 20px auto;
+    margin-left: -380px;
+    justify-content: center;
+    display: flex;
+    position: relative;
+    padding: 0 30px;
+}
+
+.container .button .btn {
+    padding: 0 13px;
+    display: inline-flex;
+    background: #ddd;
+    color: #fff;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.cus {
+    margin-top: 10px;
+    text-align: justify;
+}
+
+.container .button .btn.active {
+    background: #444;
+}
+
+.fam .p {
+    margin-left: 20px;
+}
+
+@media print {
+    body * {
+        visibility: hidden;
+    }
+    #resume-template * {
+        visibility: visible;
+    }
+    #size * {
+        visibility: hidden;
+    }
+    #rowbg * {
+        display: none;
+    }
+    #dbutton {
+        display: none;
+    }
+}
+
+.container .buttons {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin-bottom: 20px;
+}
+
+.container .buttons .btn {
+    padding: 7px 13px;
+    display: inline-flex;
+    background: #ddd;
+    margin-left: 10px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.container .buttons .btn.active:hover {
+    background: rgb(22, 14, 44);
+}
+
+.container .buttons .btn1.active:hover {
+    background: rgb(22, 14, 44);
+}
+
+.container .buttons .btn:nth-child(2) {
+    font-size: 1.55em;
+}
+
+.container .buttons .btn:nth-child(3) {
+    font-size: 1.75em;
+}
+
+.container .button {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+}
+
+.container .button .btns {
+    padding: 0 10px;
+    display: inline-flex;
+    background: #ddd;
+    color: #fff;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.container .button .btns {
+    background: rgb(122, 25, 25);
+    font-family: 'Modern';
+}
+
+.container .button .btns:nth-child(2) {
+    padding: 5px;
+    font-family: 'Modern';
+}
+
+.container .button .btns:nth-child(3) {
+    padding: 5px;
+    font-family: 'YU Gothic';
+}
+
+.container .button .btns:nth-child(4) {
+    padding: 5px;
+    font-family: 'Nirmala UI';
+}
+
+.container .button .btns:nth-child(5) {
+    padding: 5px;
+    font-family: 'Comic Sans MS';
+}
+
+.container .button .btns:nth-child(6) {
+    padding: 5px;
+    font-family: 'Roman';
+}
+
+.button1 .btns1 {
+    background: rgb(122, 25, 25);
+    color: white;
+}
+
+@media print {
+    body, html {
+      width: 210mm;
+      height: 297mm;
+      margin: 0;
+      padding: 0;
+    }
+    
+    #resume-template {
+      width: 210mm;
+      height: 297mm;
+      margin: 0;
+      padding: 10mm;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: row;
+    }
+  
+    .col-md-4, .col-md-7 {
+      float: none;
+      width: 50%;
+    }
+  
+    .col-md-4 {
+      background-color: #f0ebeb;
+      padding: 15px;
+    }
+  
+    .col-md-7 {
+      background-color: #2b2f3a;
+      color: white;
+      padding: 15px;
+    }
+  
+    .myimg {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin: 0 auto;
+      display: block;
+    }
+  }

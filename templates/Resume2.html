@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="static/css/Res2.css" />
+    <title>Resume2</title>
+</head>
+
+<body>
+    <div class="container" id="resume-form">
+        <h1 class="text-center my-1">Resume</h1>
+        <p class="text-center ">Enter your Details</p>
+        <div class="row">
+            <div class="col-md-6">
+                <h3 class="my-2">Personal Information</h3>
+
+                <!-- name      -->
+                <div class="form-group ">
+                    <label for="nameField">Your Name</label>
+                    <input type="text" id="nameField" placeholder="Enter Your Name" class="form-control">
+
+                </div>
+                <!-- pro -->
+                <div class="form-group ">
+                    <label for="proField">Your Profession</label>
+                    <input type="text" id="proField" placeholder="eg : Graphic Designer" class="form-control">
+
+                </div>
+
+
+                <!-- Phone -->
+                <div class="form-group mt-4">
+                    <label for="contactField ">Your Contact</label>
+                    <input type="text" id="contactField" placeholder="Enter Your Contact" class="form-control">
+
+                </div>
+
+                <!-- email -->
+                <div class="form-group mt-4">
+
+                    <label for="emailField ">Your Email</label>
+                    <input type="email" id="emailField" placeholder="Enter your Email Id" class="form-control">
+
+                </div>
+
+                <!-- website -->
+                <div class="form-group mt-4">
+
+                    <label for="webField ">Your Website</label>
+                    <input type="web" id="webField" placeholder="Enter your Website" class="form-control">
+
+                </div>
+
+                <!-- Address -->
+                <div class="form-group mt-4">
+
+                    <label for="addressField ">Your Address</label>
+                    <textarea id="addressField" placeholder="Enter here" class="form-control">
+                    </textarea>
+
+                </div>
+
+
+
+                <!-- Skills -->
+
+
+                <div class="form-group mt-4" id="sk">
+
+                    <label for="">Skills</label>
+                    <textarea rows="1" placeholder="Enter here" class="form-control skField">
+                    </textarea>
+                    <div class="container text-center mt-2" id="skAddButton">
+                        <button onclick="addNewSKField()" class="btn btn-primary btn-sm">Add</button>
+                    </div>
+                </div>
+                <!-- hobby -->
+
+                <div class="form-group " id="hb">
+
+                    <label for="">Hobbies</label>
+                    <textarea rows="1" placeholder="Enter here" class="form-control hbField">
+                    </textarea>
+                    <div class="container text-center mt-1" id="hbAddButton">
+                        <button onclick="addNewHBField()" class="btn btn-primary btn-sm">Add</button>
+                    </div>
+                </div>
+
+
+
+            </div>
+            <!-- profile -->
+            <div class="col-md-6">
+                <h3>Professional Summary</h3>
+                <div class="form-group mt-4">
+
+                    <label for="profileField ">Profile</label>
+                    <textarea rows="3" id="profileField" placeholder="Enter here" class="form-control  ">
+                    </textarea>
+
+
+                    <!-- photo -->
+                    <div class="form-group mt-3">
+                        <label for=" ">Select Your Photo</label>
+                        <input id="imgField" type="file" class="form-control" />
+
+                    </div>
+
+                    <!-- experience -->
+
+                    <div class="form-group mt-4" id="we">
+
+                        <label for="">Experience</label>
+                        <textarea rows="2" placeholder="Enter here" class="form-control weField">
+                        </textarea>
+                        <div class="container text-center mt-2" id="weAddButton">
+                            <button onclick="addNewWEField()" class="btn btn-primary btn-sm">Add</button>
+                        </div>
+
+                        <!-- education -->
+
+                        <div class="form-group mt-1" id="ed">
+
+                            <label for="">Education</label>
+                            <textarea placeholder="Enter here" rows="2" class="form-control edField">
+                            </textarea>
+                            <div class="container text-center mt-2" id="edAddButton">
+                                <button onclick="addNewEDField()" class="btn btn-primary btn-sm">Add</button>
+                            </div>
+
+                            <!-- Award-->
+
+                            <div class="form-group " id="ad">
+
+                                <label for="">Awards</label>
+                                <textarea rows="1" placeholder="Enter here" class="form-control adField">
+                                </textarea>
+                                <div class="container text-center mt-1" id="adAddButton">
+                                    <button onclick="addNewADField()" class="btn btn-primary btn-sm">Add</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container text-center mt-5 ">
+            <button onclick="generateresume()" class="btn btn-primary btn-lg ">Generate Resume</button>
+        </div>
+    </div>
+
+    <br>
+
+
+
+    <!-- template -->
+    <div class="container" id="resume-template">
+
+
+        <div class="container">
+            <div class="1row" id="rowbg" style="background-color: rgb(126, 90, 161); width: 60%; border-radius: 30px; margin-left: 320px; ">
+
+
+                <div class="buttons" id="size" style="padding:10px; margin-left: -50px; padding-left: 1.5rem 1.25rem; padding-right: 10px;">
+
+                    <span class="btn active" style="margin-bottom: 21px;" onclick="smallA()">A</span>
+                    <span class="btn active" id="btn1" style="margin-bottom: 21px;" onclick="mediumA()">A</span>
+                    <span class="btn active " id="btn2" style="margin-bottom: 21px;" onclick="bigA()">A</span>
+                    <br>
+
+
+
+                    <form style=" margin-left: 20px; margin-bottom: 20px;">
+                        <h4 style="margin-left: 40px;"> color</h4>
+                        <select class="button1" onchange="handleOnChangeEvent(this.value)" style="border-radius: 20px; font-size: 20px; height: 40px; width: 140px; color: gray;">
+                        <option  value="" >color</option>
+                        <option  class="btns1" value="#737CA1">slate blue gray</option>
+                        <option  class="btns1" value="#E84A5F">Red</option>
+                        <option   class="btns1" value="#357EC7">Blue</option>
+                        <option  class="btns1" value="#3EA99F">Light sea green</option>
+                        <option  class="btns1" value="#C5908E">Rose</option>
+                    </select>
+
+                    </form>
+
+                    <form style="margin-left: 10px; ">
+                        <h4 style="margin-left: 27px;">font style</h4>
+                        <select class="button" id="font" onclick="changeFont(this.value)" style=" height: 40px; border-radius: 10px; margin-left: 20px; font-size: 20px; color: gray;">
+                <option value="">select style</option>
+                <option class="btns " >Modern</option>
+                <option class="btns" >YU Gothic</option>
+                <option class="btns" >Nirmala UI</option>
+                <option class="btns" >Comic Sans MS</option>
+                <option class="btns">Roman</option>
+                </select>
+                    </form>
+
+
+
+
+
+
+
+
+                </div>
+
+            </div>
+
+
+
+
+            <div class="row " id="text11">
+                <!-- fisrt coulnm  -->
+                <div class="col-md-3 text-center py-5  background  " id="text12">
+                    <img src="https://i.pinimg.com/474x/65/25/a0/6525a08f1df98a2e3a545fe2ace4be47.jpg" class="img-fluid img1" id="imgTemplate" />
+
+                    <div class="container">
+                        <!-- name  -->
+                        <p id="nameT1" style="font-size: 220%; font-weight: 700;">TONY SION</p>
+
+                        <!-- post  -->
+                        <p id="proT">UX Designer</p>
+
+                        <div class="content ">
+
+                            <!-- contact  -->
+
+                            <P style="margin-left: 16%; margin-top: 40%;  font-size: 150%;  font-family: 'Gill Sans MT';">CONTACT</P>
+                            <p style=" margin-left: 15%; margin-top: 10%; font-weight: bold; ">PHONE</p>
+                            <p id="contactT" style="margin-top: 1%;   margin-left: 13%;">+9134567836</p>
+
+
+                            <!-- mail  -->
+                            <p style=" margin-left: 15%; margin-top: 5%; font-weight: bold; ">MAIL</p>
+                            <p><a id="emailT" href="" style="margin-left: 15%; font-size: large;">tonysion12@gmail.com</a></p>
+
+                            <!-- website  -->
+                            <p style=" margin-left: 15%; margin-top: 5%; font-weight: bold; ">WEBSITE</p>
+                            <p><a id="webT" href="" style="  margin-left: 19%; font-size: large;">www.tonyweb.com</a></p>
+
+                            <!-- address  -->
+                            <p style=" margin-left: 15%; margin-top: 10%; font-weight: bold; ">ADDRESS</p>
+                            <p id="addressT" style="   margin-left: 13%;"> greenland park, Los Angels, US</p>
+
+                            <hr style="width:50% ;text-align:left; margin-left:40px; margin-top: 40px;">
+
+                            <!-- skillss-->
+
+
+                            <p style="margin-left: 16%; margin-top: 20%;  font-size: 150%;  font-family: 'Gill Sans MT';">SKILLS</p>
+
+
+                            <ul id="skT">
+                                <li>Software testing</li>
+                                <li>Innovative</li>
+                                <li>Create designer</li>
+                            </ul>
+
+
+
+
+                            <hr style="width:50% ;text-align:left; margin-left:40px; margin-top: 40px;">
+
+                            <!-- hobby  -->
+                            <div class="a">
+                                <p style="margin-left: 16%; margin-top: 20%;  font-size: 150%;  font-family: 'Gill Sans MT';">HOBBIES</p>
+
+                                <ul id="hbT">
+                                    <li>Music</li>
+                                    <li>Travelling</li>
+                                    <li>Game</li>
+                                </ul>
+
+
+                            </div>
+
+
+
+
+
+                        </div>
+
+
+
+
+                    </div>
+
+                </div>
+
+
+                <!-- second column -->
+
+                <div class="col-md-8 py-4">
+
+                    <div class="">
+
+                        <h3 class="m-lg-4 ">PROFILE</h3>
+
+                        <div class="body m-lg-4 ">
+
+                            <p id="profileT">Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum sunt officiis dolorem fuga repellendus beatae est ut veniam, libero eligendi dolorum sit odit ad? Dolores quas doloribus doloremque libero alias sit, rem tempore
+                                pariatur nesciunt nemo excepturi voluptas dolore qui expedita architecto officiis cumque perferendis suscipit sapiente. Amet, suscipit sapiente.</p>
+
+                        </div>
+
+
+                    </div>
+
+                    <hr>
+                    <!-- experience -->
+                    <div class=" mt-2 ">
+
+                        <div class=" ">
+                            <h3 class="m-lg-4 ">EXPERIENCES</h3>
+                        </div>
+                        <div class=" m-lg-3 " style="font-size:140%; ">
+                            <ul id="weT">
+
+
+                                <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque, earum! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque, earum!
+                                </li>
+                                <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque, earum! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque, earum!</li>
+                                
+                            </ul>
+
+
+                        </div>
+
+                        <hr>
+                        <!-- qualification -->
+                        <div class="mt-5 ">
+                            <div class=" ">
+                                <h3 class="m-lg-4 mt-5 ">EDUCATION</h3>
+                            </div>
+                            <div class=" m-lg-4 mt-3 " style="font-size:140%; ">
+                                <ul id="edT">
+                                    <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque, earum! Lorem ipsum dolor sit, amet consectetur adipisicing elit.</li>
+                                    <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque, ear Lorem ipsum dolor sit, amet consectetur adipisicing elit.</li>
+
+                                    <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque, earum! Lorem ipsum dolor sit, amet consectetur adipisicing elit.</li>
+
+                                    <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque, earum! Lorem ipsum dolor sit, amet consectetur adipisicing elit.</li>
+                                </ul>
+
+                            </div>
+
+                            <hr>
+
+
+                            <!-- awards  -->
+
+                            <div class="mt-5 ">
+
+                                <div class=" ">
+                                    <h2 class="m-lg-4 " style="margin-top: 10px; ">AWARDS</h3>
+                                </div>
+                                <div class=" m-lg-4 " style="font-size:100%; ">
+                                    <ul id="adT">
+                                        <li>Academic or athletic awards.</li>
+
+                                        <li>Scholarships.</li>
+
+                                        <li>Awards of excellence in voluntary activities.</li>
+
+                                        <li>Academic achievements.</li>
+                                    </ul>
+
+                                </div>
+
+
+                            </div>
+
+                        </div>
+                        <script>
+                            let buttons = document.querySelector('.buttons');
+                            let btn = buttons.querySelectorAll('.btn');
+                            for (var i = 0; i < btn.length; i++) {
+                                btn[i].addEventListner('click', function() {
+                                    let current = document.getElementsByClassName('active');
+                                    current[0].className = current[0].className.replace("active", "");
+                                    this.className += "active";
+                                })
+                            }
+                        </script>
+
+
+                    </div>
+                </div>
+            </div>
+
+
+
+
+        </div>
+
+        <div class="container mt-5 text-center" id="printT">
+
+            <button onclick="downloadResume()" class="btn btn-primary btn-lg">Download</button>
+
+
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js " integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p " crossorigin="anonymous "></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+        <script src="/static/js/Res2.js "></script>
+
+
+</body>
+
+</html>

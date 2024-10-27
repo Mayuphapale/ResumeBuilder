@@ -1,0 +1,267 @@
+/* #resume-form{
+    display: none;
+  } */
+
+
+#resume-tamplate{
+    height: 30cm; /* Set height to 30 cm */
+    overflow: hidden; /* Hide overflow if content exceeds */
+    position: relative; 
+  } 
+
+body {
+    background-color: #fff;
+    margin: 1em auto;
+    max-width: 50em;
+}
+
+.background4 {
+    box-shadow: 1x 1px rgb(46, 45, 45);
+    border-radius: 5px;
+    border-radius: 15x;
+    width: 126px;
+    height: 50px;
+    font-size: 22px;
+    color: white;
+    background-color: rgb(32, 30, 30);
+}
+
+.background4:hover {
+    background-color: #2e59e6;
+    color: rgb(255, 255, 255);
+}
+
+p,
+ul {
+    font-family: sans-serif;
+    letter-spacing: 1px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ :root {
+    --yellowish: #eeb14f;
+    --dark-purple: #263547;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: var(--dark-purple);
+    height: 160px;
+    width: 110%;
+}
+
+.logo {
+    /* background: url('./rss.png') no-repeat; */
+    width: 32px;
+    height: 32px;
+    margin: 20px;
+}
+
+.title-holder {
+    align-items: center;
+    color: lavender;
+}
+
+.nama {
+    color: var(--yellowish);
+    font-family: sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.designare {
+    color: #ffffff;
+    font-family: sans-serif;
+    text-transform: uppercase;
+}
+
+.content-body {
+    display: flex;
+    flex-direction: row;
+}
+
+.wrapper {
+    margin: 20px;
+}
+
+.section-left {
+    flex: 1;
+    background-color: var(--yellowish);
+}
+
+.section-left ul {
+    /* margin-left: -40px; */
+    text-transform: capitalize;
+}
+
+h2 {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: sans-serif;
+    letter-spacing: 2px;
+}
+
+h3 {
+    text-transform: uppercase;
+    font-family: sans-serif;
+    font-weight: normal;
+    letter-spacing: 2px;
+}
+
+h4 {
+    font-family: sans-serif;
+    font-weight: normal;
+    margin-top: -10px;
+    letter-spacing: 1px;
+}
+
+.container1 {
+    padding-top: 0%;
+}
+
+.section-right {
+    flex: 2;
+}
+
+.section-right .wrapper {
+    margin-left: 50px;
+}
+
+.section-right ul {
+    margin-left: -20px;
+}
+
+.section-right h2 {
+    color: var(--yellowish);
+    font-weight: bold;
+}
+
+.gpa {
+    margin-top: -15px;
+}
+
+.container .buttons {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin-bottom: 20px;
+}
+
+.container .buttons .btn {
+    padding: 7px 13px;
+    display: inline-flex;
+    background: #ddd;
+    margin-left: 10px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.container .buttons .btn.active {
+    background: #444;
+}
+
+.container .buttons .btn:nth-child(2) {
+    font-size: 1.25em;
+}
+
+.container .buttons .btn:nth-child(3) {
+    font-size: 1.40em;
+}
+
+
+/* font family :start */
+
+.container .button {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+}
+
+.container .button .btns {
+    padding: 0 10px;
+    display: inline-flex;
+    background: #ddd;
+    color: #fff;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.container .button .btns {
+    background: rgb(122, 25, 25);
+    font-family: 'Modern';
+}
+
+.container .button .btns:nth-child(2) {
+    padding: 5px;
+    font-family: 'Modern';
+}
+
+.container .button .btns:nth-child(3) {
+    padding: 5px;
+    font-family: 'YU Gothic';
+}
+
+.container .button .btns:nth-child(4) {
+    padding: 5px;
+    font-family: 'Nirmala UI';
+}
+
+.container .button .btns:nth-child(5) {
+    padding: 5px;
+    font-family: 'Comic Sans MS';
+}
+
+.container .button .btns:nth-child(6) {
+    padding: 5px;
+    font-family: 'Roman';
+}
+
+.button1 .btns1 {
+    background: rgb(122, 25, 25);
+    color: white;
+}
+
+@media print {
+    body * {
+        visibility: hidden;
+    }
+    #resume-template * {
+        visibility: visible;
+    }
+    #size * {
+        visibility: hidden;
+    }
+    #font * {
+        visibility: hidden;
+    }
+    #rowbg * {
+        display: none;
+    }
+}
+
+
+/* print button ends */
+
+@media only screen and (max-width:700px) {
+    /* #resume-form {
+        width: 400px;
+    } */
+    #resuem-template {
+        width: 10cm;
+        height: 20cm;
+        box-sizing: border-box;
+    }
+}

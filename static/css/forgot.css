@@ -1,0 +1,61 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.card {
+    width: 280px;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+}
+
+h1 {
+    margin-bottom: 50px;
+}
+
+.textbox {
+    width: 90%;
+    overflow: hidden;
+    font-size: 50px;
+    padding: 8px 0;
+    margin: 13px 0;
+    border-bottom: 3px solid #333;
+    color: black;
+}
+
+.textbox input {
+    border: 0;
+    outline: 0;
+    background: none;
+    color: black;
+    margin: 5px;
+}
+
+.textbox input::placeholder {
+    color: black;
+}
+
+.btn {
+    display: inline-block;
+    border-radius: 6px;
+    padding: 12px 25px;
+    box-sizing: border-box;
+    border-color: black;
+    text-decoration: none;
+    color: #333;
+    position: relative;
+    font-family: "Gill Sans MT";
+    border: 2px solid #FFF;
+    margin-top: 20px;
+    margin-left: 100px;
+}
+
+.btn:hover {
+    background-color: rgba(174, 221, 245, 0.3);
+}

@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <title>Resume11</title>
+    <style type="text/css">
+        /* #resume-template {
+    display: none;
+} */
+        
+        .img1 {
+            border-radius: 50%;
+            width: 200px;
+            height: 200px;
+        }
+        
+        .background4 {
+            box-shadow: 1x 1px rgb(46, 45, 45);
+            border-radius: 5px;
+            border-radius: 15x;
+            width: 126px;
+            height: 50px;
+            font-size: 22px;
+            color: white;
+            background-color: rgb(32, 30, 30);
+        }
+        
+        .background4:hover {
+            background-color: #2e59e6;
+            color: rgb(255, 255, 255);
+        }
+        
+        .background {
+            background-color: #957dad;
+        }
+        
+        .row h1 {
+            height: 150px;
+            padding-bottom: 10px;
+        }
+        
+        .content h3 {
+            text-align: center;
+            padding-right: 50px;
+            margin-bottom: 50px;
+        }
+        
+        .content p {
+            text-align: center;
+            padding-right: 50px;
+        }
+        
+        .content ul {
+            padding-right: 120px;
+            text-align: center;
+            margin-left: 50px;
+        }
+        /* .container .content p {
+    background-color;
+} */
+        
+        .child {
+            float: left;
+            width: 50%;
+            padding: 5px;
+        }
+        
+        hr {
+            margin-left: 330px;
+            color: rgb(59, 24, 24);
+        }
+        
+        .container1 .child {
+            float: left;
+            width: 50%;
+        }
+        /* post  */
+        
+        .container1 p {
+            margin-bottom: 10px;
+        }
+        
+        .content ul {
+            padding-bottom: 10px;
+            padding-top: -20px;
+        }
+        
+        ul {
+            list-style-type: square;
+        }
+        
+        .hr {
+            height: 5%;
+        }
+        
+        .cus {
+            margin-top: 10px;
+            text-align: justify;
+        }
+        
+        .fam .p {
+            margin-left: 20px;
+        }
+        
+        @media print {
+            body * {
+                visibility: hidden;
+            }
+            #resume-template * {
+                visibility: visible;
+            }
+            #size * {
+                visibility: hidden;
+            }
+            #font * {
+                visibility: hidden;
+            }
+            #prebutton * {
+                display: none;
+            }
+            #rowbg * {
+                display: none;
+            }
+        }
+        
+        .container .buttons {
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+            margin-bottom: 20px;
+        }
+        
+        .container .buttons .btn {
+            padding: 7px 13px;
+            display: inline-flex;
+            background: #ddd;
+            margin-left: 10px;
+            color: #fff;
+            cursor: pointer;
+        }
+        
+        .container .buttons .btn.active {
+            background: #444;
+        }
+        
+        .container .buttons .btn:nth-child(2) {
+            font-size: 1.25em;
+        }
+        
+        .container .buttons .btn:nth-child(3) {
+            font-size: 1.55em;
+        }
+        /* for fontstyle */
+        
+        .container .button {
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 20px;
+        }
+        
+        .container .button .btns {
+            padding: 0 10px;
+            display: inline-flex;
+            background: #ddd;
+            color: #fff;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+        
+        .container .button .btns {
+            background: rgb(122, 25, 25);
+            font-family: 'Modern';
+        }
+        
+        .container .button .btns:nth-child(2) {
+            padding: 5px;
+            font-family: 'Modern';
+        }
+        
+        .container .button .btns:nth-child(3) {
+            padding: 5px;
+            font-family: 'YU Gothic';
+        }
+        
+        .container .button .btns:nth-child(4) {
+            padding: 5px;
+            font-family: 'Nirmala UI';
+        }
+        
+        .container .button .btns:nth-child(5) {
+            padding: 5px;
+            font-family: 'Comic Sans MS';
+        }
+        
+        .container .button .btns:nth-child(6) {
+            padding: 5px;
+            font-family: 'Roman';
+        }
+        
+        .button1 .btns1 {
+            background: rgb(122, 25, 25);
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container1" style="width: 80%; margin-left: 160px; " id="cv-form">
+        <h1 class="text-center my-1">Resume Generator</h1>
+        <h3 class="text-center" style="color: rgb(97, 88, 88);">Enter Your Details</h3>
+        <hr size="5px" width="50%" color="grey">
+
+        <div class="row">
+            <div class="col-md-6 mt-2">
+                <h3>Personal Information</h3>
+                <div class="form-group">
+                    <label for="namefield">Your Name</label>
+                    <input type="text" id="namefield" placeholder="Enter Name" class="form-control">
+                </div>
+                <div class="form-group mt-2">
+                    <label for="contactfield">Your Contact</label>
+                    <input type="text" id="contactfield" placeholder="Enter Contact" class="form-control">
+                </div>
+                <div class="form-group mt-2">
+                    <label for="emailfield">Your Email</label>
+                    <input type="text" id="emailfield" placeholder="Enter Email" class="form-control">
+                </div>
+                <div class="form-group mt-2">
+                    <label for="addressfield">Your Address</label>
+                    <textarea class="form-control" id="addressfield" rows="1"></textarea>
+
+                </div>
+
+                <p1 class="text-secondary mt-3">Important Links</p1>
+                <div class="form-group mt-2">
+                    <label for="fbfield">Facebook </label>
+                    <input type="text" id="fbfield" class="form-control">
+                </div>
+                <div class="form-group mt-2">
+                    <label for="instafield">Instagram</label>
+                    <input type="text" id="instafield" class="form-control">
+                </div>
+                <div class="form-group mt-2">
+                    <label for="linkedinfield">LinkedIn</label>
+                    <input type="text" id="linkedinfield" class="form-control">
+                </div>
+                <div class="form-group  mt-2" id="skill">
+                    <label for="">Skills</label>
+                    <textarea class="form-control skillfield" rows="1"></textarea>
+
+                    <div class="container text-center mt-3" id="skillAddButton">
+                        <button onclick="addNewSkillField()" class="btn  btn-primary btm-sm">Add</button>
+                    </div>
+                </div>
+                <div class="form-group  mt-2" id="lang">
+                    <label for="">Languages</label>
+                    <textarea class="form-control langfield" rows="1"></textarea>
+
+                    <div class="container text-center mt-3" id="langAddButton">
+                        <button onclick="addNewLangField()" class="btn  btn-primary btm-sm">Add</button>
+                    </div>
+                </div>
+                <div class="form-group  mt-2" id="hobby">
+                    <label for="">Hobbies</label>
+                    <textarea class="form-control hobbyfield" rows="1"></textarea>
+
+                    <div class="container text-center mt-3" id="hobbyAddButton">
+                        <button onclick="addNewHobbyField()" class="btn  btn-primary btm-sm">Add</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mt-2">
+                <h3>Professional Information</h3>
+                <div class="form-group mt-2 ">
+                    <label for="">Profession</label>
+                    <textarea class="form-control " rows="1" id="profield" placeholder="e.g Graphic Designer"></textarea>
+                </div>
+                <div class="form-group mt-2 ">
+                    <label for="">objective</label>
+                    <textarea class="form-control " id="objfield" rows="5"></textarea>
+                </div>
+                <div class="form-group  mt-2" id="we">
+                    <label for="">Work Experience</label>
+                    <textarea class="form-control wefield" rows="4"></textarea>
+
+                    <div class="container text-center mt-3" id="weAddButton">
+                        <button onclick="addNewWEField()" class="btn  btn-primary btm-sm">Add</button>
+                    </div>
+                </div>
+                <div class="form-group mt-3">
+                    <label for="">select your photo</label>
+                    <input id="imgfield" type="file" class="form-control">
+                </div>
+
+                <div class="form-group  mt-2" id="aq">
+                    <label for="">Academic Qualifiction</label>
+                    <textarea class="form-control aqfield" rows="1"></textarea>
+
+                    <div class="container text-center mt-3" id="aqAddButton">
+                        <button onclick="addNewAQField()" class="btn  btn-primary btm-sm">Add</button>
+                    </div>
+                </div>
+                <div class="form-group  mt-2" id="cer">
+                    <label for="">Certifications</label>
+                    <textarea class="form-control cerfield" rows="1"></textarea>
+
+                    <div class="container text-center mt-3" id="cerAddButton">
+                        <button onclick="addNewCerField()" class="btn  btn-primary btm-sm">Add</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="container text-center mt-3">
+            <button onclick="generate()" class="btn btn-primary btn-lg">Generate</button>
+        </div>
+
+    </div>
+    <br>
+
+
+    <!-- template -->
+    <div class="container1" id="resume-template">
+        <div class="container">
+            <div class="1row" id="rowbg" style="background-color: rgb(126, 90, 161); width: 55%; border-radius: 30px; margin-left: 390px;">
+
+
+                <div class="buttons" id="size" style="padding:10px; margin-left: -50px; padding-left: 1.5rem 1.25rem;">
+
+                    <span class="btn active" style="margin-bottom: 21px;" onclick="smallA()">A</span>
+                    <span class="btn " style="margin-bottom: 21px;" onclick="mediumA()">A</span>
+                    <span class="btn " style="margin-bottom: 21px;" onclick="bigA()">A</span>
+                    <br>
+
+
+
+                    <form style=" margin-left: 20px; margin-bottom: 20px;">
+                        <h4 style="margin-left: 40px;"> color</h4>
+                        <select class="button1" onchange="handleOnChangeEvent(this.value)" style="border-radius: 20px; font-size: 20px; height: 40px; width: 140px; color: gray;">
+                        <option  value="" >color</option>
+                        <option  class="btns1" value="#737CA1">slate blue gray</option>
+                        <option  class="btns1" value="#E84A5F">Red</option>
+                        <option   class="btns1" value="#357EC7">Blue</option>
+                        <option  class="btns1" value="#3EA99F">Light sea green</option>
+                        <option  class="btns1" value="#C5908E">Rose</option>
+                    </select>
+
+                    </form>
+
+                    <form style="margin-left: 10px; ">
+                        <h4 style="margin-left: 27px;">font style</h4>
+                        <select class="button" id="font" onclick="changeFont(this.value)" style=" height: 40px; border-radius: 10px; font-size: 20px; color: gray;">
+                <option value="">select style</option>
+                <option class="btns " >Modern</option>
+                <option class="btns" >YU Gothic</option>
+                <option class="btns" >Nirmala UI</option>
+                <option class="btns" >Comic Sans MS</option>
+                <option class="btns">Roman</option>
+                </select>
+                    </form>
+
+
+
+
+
+
+
+
+                </div>
+
+            </div>
+
+
+
+            <div class="row " id="text11">
+                <!-- fisrt coulnm  -->
+                <div class="col-md-3 text-center py-5   background  " id="text13" style="margin-left: 150px;">
+                    <img src="https://i.pinimg.com/474x/65/25/a0/6525a08f1df98a2e3a545fe2ace4be47.jpg" class="img-fluid img1" id="imgTemplate" />
+
+                    <div class="container">
+                        <!-- name  -->
+                        <p1 id="name1T" style="font-size: 208%; font-weight: 700;">Jennifer Robinson</p1>
+
+                        <!-- post  -->
+                        <p id="proT">UX Designer</p>
+
+
+                        <div class="content ">
+
+                            <!-- contact  -->
+
+                            <P1 style=" margin-top: 40%;  font-size: 150%;  font-family: 'Gill Sans MT'; border-bottom: 1x solid black;">CONTACT</P1>
+                            <p style=" margin-left: 15%; margin-top: 10%; font-weight: bold; ">PHONE</p>
+                            <p id="contactT" style="margin-top: 1%;   margin-left: 13%;">+9134567836</p>
+
+
+                            <!-- mail  -->
+                            <p style=" margin-left: 15%; margin-top: 5%; font-weight: bold; ">MAIL</p>
+                            <p><a id="emailT" href="" style="margin-left: 15%; font-size: large; color:black ;">tonysion12@gmail.com</a></p>
+
+                            <!-- website  -->
+                            <p style=" margin-left: 15%; margin-top: 5%; font-weight: bold; ">WEBSITE</p>
+                            <p><a id="linkedT" href="" style="  margin-left: 19%; font-size: large; color:black;">www.tonyweb.com</a></p>
+
+                            <!-- address  -->
+                            <p style=" margin-left: 15%; margin-top: 10%; font-weight: bold; ">ADDRESS</p>
+                            <p id="addressT" style="   margin-left: 13%;"> greenland park, Los Angels, US</p>
+
+                            <hr style="width:50% ;text-align:left; margin-left:40px; margin-top: 40px;">
+
+                            <!-- skillss-->
+
+
+                            <p style="margin-left: 16%; margin-top: 20%;  font-size: 150%;  font-family: 'Gill Sans MT';">SKILLS</p>
+
+
+                            <ul id="skillT">
+                                <li>Software testing</li>
+                                <li>Innovative</li>
+                                <li>Create designer</li>
+                            </ul>
+
+
+
+
+                            <hr style="width:50% ;text-align:left; margin-left:40px; margin-top: 40px;">
+
+                            <!-- hobby  -->
+                            <div class="a">
+                                <p style="margin-left: 16%; margin-top: 20%;  font-size: 150%;  font-family: 'Gill Sans MT';">HOBBIES</p>
+
+                                <ul id="hobbyT">
+                                    <li>Music</li>
+                                    <li>Travelling</li>
+                                    <li>Game</li>
+                                </ul>
+
+
+                            </div>
+
+
+
+
+
+                        </div>
+
+
+
+
+                    </div>
+
+                </div>
+
+
+                <!-- second column -->
+
+                <div class="col-md-7 text-center py-5" style="background-color: #f7ecff;">
+
+                    <div class="">
+
+                        <h3 class="m-lg-4 ">PROFILE</h3>
+
+                        <div class="body m-lg-4 ">
+
+                            <p id="objT">Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum sunt officiis dolorem fuga repellendus beatae est ut veniam, libero eligendi dolorum sit odit ad? Dolores quas doloribus doloremque libero alias sit, rem tempore
+                                pariatur nesciunt nemo excepturi voluptas dolore qui expedita architecto officiis cumque perferendis suscipit sapiente. Amet, suscipit sapiente.</p>
+
+                        </div>
+
+
+                    </div>
+
+
+                    <!-- experience -->
+                    <div class=" mt-2 ">
+
+                        <div class=" ">
+                            <h3 class="m-lg-4 ">EXPERIENCES</h3>
+                        </div>
+                        <div class=" m-lg-3 " style="font-size:120%; ">
+                            <ul id="weT">
+
+
+                                <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque, earum! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque, earum!
+                                </li>
+                                <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque, earum! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque, earum!</li>
+                                <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque, earum! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque, earum!</li>
+                                <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque, earum! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque, earum!</li>
+
+                            </ul>
+
+
+                        </div>
+
+
+                        <!-- qualification -->
+                        <div class="mt-5 ">
+                            <div class=" ">
+                                <h3 class="m-lg-4 mt-5 ">EDUCATION</h3>
+                            </div>
+                            <div class=" m-lg-4 mt-3 " style="font-size:120%; ">
+                                <ul id="eduT">
+                                    <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque, earum! Lorem ipsum dolor sit, amet consectetur adipisicing elit.</li>
+                                    <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque, ear Lorem ipsum dolor sit, amet consectetur adipisicing elit.</li>
+
+                                    <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque, earum! Lorem ipsum dolor sit, amet consectetur adipisicing elit.</li>
+
+                                    <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque, earum! Lorem ipsum dolor sit, amet consectetur adipisicing elit.</li>
+                                </ul>
+
+                            </div>
+
+
+
+
+                            <!-- awards  -->
+
+                            <div class="mt-5 ">
+
+                                <div class=" ">
+                                    <h2 class="m-lg-4 " style="margin-top: 10px; ">AWARDS</h2>
+                                </div>
+                                <div class=" m-lg-4 " style="font-size:100%; ">
+                                    <ul id="cerT">
+                                        <li>Academic or athletic awards.</li>
+
+                                        <li>Scholarships.</li>
+
+                                        <li>Awards of excellence in voluntary activities.</li>
+
+                                        <li>Academic achievements.</li>
+                                    </ul>
+
+                                </div>
+                                <div class="">
+                                    <h2 class="m-lg-4 " style="margin-top: 10px; ">LANGUAGES</h2>
+                                </div>
+                                <ul style="list-style-type:circle" id="languageT">
+                                    <li>
+                                        English
+                                    </li>
+                                    <li>
+                                        Marathi
+                                    </li>
+                                    <li>
+                                        Hindi
+                                    </li>
+                                    <li>
+                                        Korean
+                                    </li>
+                                </ul>
+
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+
+
+                </div>
+                <div class="container mt-3 text-center" id="prebutton">
+
+                    <button onclick="printcv()" class="btn btn-primary btn-lg ">Download</button>
+
+
+                </div>
+            </div>
+        </div>
+
+        <script>
+            let buttons = document.querySelector('.buttons');
+            let btn = buttons.querySelectorAll('.btn');
+            for (var i = 0; i < btn.length; i++) {
+                btn[i].addEventListener('click', function() {
+                    let current = document.getElementsByClassName('active');
+                    current[0].className = current[0].className.replace("active", "");
+                    this.className += " active";
+
+                })
+            }
+
+
+            let button = document.querySelector('.button');
+            let btns = document.querySelectorAll('.btns');
+            for (var i = 0; i < btns.length; i++) {
+                btns[i].addEventListener('click', function() {
+                    let current = document.getElementsByClassName('able');
+                    current[0].className = current[0].className.replace("able", "");
+                    this.className += " able";
+                })
+            }
+        </script>
+
+
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js " integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p " crossorigin="anonymous "></script>
+
+    <script src="/static/js/res11.js"></script>
+
+
+</body>
+
+</html>

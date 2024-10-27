@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How it works</title>
+    <style>
+        img[alt="www.000webhost.com"] {
+            display: none;
+        }
+    </style>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/how.css') }}">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="heding-section">
+                <h1 style="text-align: center; margin-top: 20px; font-weight: bolder;"> HOW IT WORKS</h1>
+                <P style="text-align: center; font-size: 25px; margin-top: 20px;">Easy way to build your resume fast and quickly.</P>
+                <p style="text-align: center; font-size: 25px;">Just three simple steps.</p>
+            </div>
+            <div class=" content-section ">
+                <div class="card ">
+                    <img src="{{ url_for('static', filename='images/custome.jpeg') }}">
+                    <h1>Select a template design</h1>
+                    <p>Quick resume website provides you +professional templates.You just need to select template design. So as you see our Quick resume's home page. Click on build my resume.There are easy and simple steps
+                    </p>
+                </div>
+                <div class="card " style="margin-bottom: 120px;">
+                    <img src="{{ url_for('static', filename='images/choose.jpeg') }}">
+                    <h1>Build your resume</h1>
+                    <p>Build your resume by customizing it by yourself. just fill your information. Edit your template by changing size, font style . Customize your resume like this. It is easy and simple to do.</p>
+                </div>
+                <div class="card " style="margin-bottom: 200px;">
+                    <img src="{{ url_for('static', filename='images/dw.jpeg') }}">
+                    <h1>Download as a PDF</h1>
+                    <p>As you build your resume,after that "Hit Download" button. and save your resume as pdf.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,336 @@
+/* CSS Variables for Consistent Theming */
+:root {
+    --primary-color: #1976d2;
+    --secondary-color: #ffffff;
+    --accent-color: #ff9800;
+    --text-color: #333333;
+    --background-color: #f5f5f5;
+    --card-background: #ffffff;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --transition-speed: 0.3s;
+}
+
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: var(--primary-color);
+    box-shadow: 0 2px 4px var(--shadow-color);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo img {
+    height: 50px;
+    transition: transform var(--transition-speed);
+}
+
+.logo img:hover {
+    transform: scale(1.05);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin-left: 25px;
+}
+
+.nav-links a {
+    color: var(--secondary-color);
+    font-weight: 500;
+    transition: color var(--transition-speed);
+}
+
+.nav-links a:hover {
+    color: var(--accent-color);
+}
+
+.btn-outline {
+    border: 2px solid var(--secondary-color);
+    padding: 8px 16px;
+    border-radius: 25px;
+    transition: background-color var(--transition-speed), color var(--transition-speed);
+}
+
+.btn-outline:hover {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    color: var(--secondary-color);
+    cursor: pointer;
+    transition: transform var(--transition-speed);
+}
+
+.menu-toggle.active {
+    transform: rotate(90deg);
+}
+
+/* Steps Section */
+.steps-section {
+    padding: 80px 60px;
+    text-align: center;
+    background-color: var(--background-color);
+}
+
+.steps-section h1 {
+    font-size: 36px;
+    margin-bottom: 50px;
+    color: var(--primary-color);
+}
+
+.steps {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.step {
+    flex: 1 1 250px;
+    background-color: var(--card-background);
+    border-radius: 12px;
+    padding: 30px 20px;
+    box-shadow: 0 4px 6px var(--shadow-color);
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+.step:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px var(--shadow-color);
+}
+
+.step img {
+    height: 80px;
+    margin-bottom: 20px;
+}
+
+.step h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: var(--primary-color);
+}
+
+.step p {
+    font-size: 16px;
+    color: #555555;
+}
+
+/* Call to Action Button */
+.btn {
+    background-color: var(--accent-color);
+    color: var(--secondary-color);
+    padding: 12px 24px;
+    border: none;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color var(--transition-speed), transform var(--transition-speed);
+    box-shadow: 0 4px 6px var(--shadow-color);
+    display: inline-block;
+    margin-top: 40px;
+}
+
+.btn:hover {
+    background-color: #e68900;
+    transform: translateY(-2px);
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 40px 30px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.footer-left p {
+    font-size: 16px;
+    max-width: 350px;
+    line-height: 1.6;
+}
+
+.footer-center h3,
+.footer-right h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.footer-center ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-center ul li {
+    margin-bottom: 10px;
+}
+
+.footer-center ul li a {
+    color: var(--secondary-color);
+    font-size: 16px;
+    transition: color var(--transition-speed);
+}
+
+.footer-center ul li a:hover {
+    color: var(--accent-color);
+}
+
+.footer-right p {
+    font-size: 16px;
+    margin: 8px 0;
+    display: flex;
+    align-items: center;
+}
+
+.footer-right p i {
+    margin-right: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .steps-section {
+        padding: 60px 30px;
+    }
+
+    .steps-section h1 {
+        font-size: 32px;
+        margin-bottom: 40px;
+    }
+
+    .steps {
+        gap: 20px;
+    }
+
+    .step {
+        padding: 25px 15px;
+    }
+
+    .step img {
+        height: 70px;
+    }
+
+    .btn {
+        margin-top: 30px;
+    }
+
+    .footer-left p,
+    .footer-center ul li a,
+    .footer-right p {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: var(--primary-color);
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 20px 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 15px 0;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .steps {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .step {
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .steps-section {
+        padding: 40px 20px;
+    }
+
+    .steps-section h1 {
+        font-size: 28px;
+        margin-bottom: 30px;
+    }
+
+    .step {
+        padding: 20px 10px;
+    }
+
+    .step img {
+        height: 60px;
+    }
+
+    .step h3 {
+        font-size: 20px;
+    }
+
+    .step p {
+        font-size: 14px;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-left, .footer-center, .footer-right {
+        max-width: 100%;
+    }
+}

@@ -1,0 +1,223 @@
+/* body {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    background: url(Bimages/Bforgetpasswordbg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.forgotpassword-box {
+    width: 280px;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+}
+
+.card {
+    width: 350px;
+    height: 400px;
+    margin-top: 80px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    box-shadow: 0 0 40px 20px rgba(0, 0, 0, 0.26);
+    perspective: 1000px;
+}
+
+.forgotpassword-box h1 {
+    float: left;
+    margin-bottom: 50px;
+    padding: 13px 0;
+}
+
+.textbox {
+    width: 100%;
+    overflow: hidden;
+    font-size: 20px;
+    padding: 10px 0;
+    margin: 13px 0;
+    border-bottom: 2px solid #333;
+    justify-content: center;
+}
+
+.textbox input {
+    border: 0;
+    outline: 0;
+    background: none;
+    width: 110px;
+    float: left;
+    color: black;
+    margin: 5px;
+    text-align: center;
+}
+
+.btn {
+    display: inline-block;
+    border-radius: 6px;
+    padding: 12px 25px;
+    box-sizing: border-box;
+    border-color: black;
+    text-decoration: none;
+    color: #333;
+    position: relative;
+    font-family: "Gill Sans MT";
+    border: 2px solid #FFF;
+    margin-top: 20px;
+    margin-left: 80px;
+}
+
+.btn:hover {
+    background-color: rgba(174, 221, 245, 0.3);
+} */
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.forgotpassword-box {
+    width: 280px;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+}
+
+.card {
+    width: 350px;
+    height: 400px;
+    margin-top: 80px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    box-shadow: 0 0 40px 20px rgba(0, 0, 0, 0.26);
+    perspective: 1000px;
+}
+
+.forgotpassword-box h1 {
+    float: left;
+    margin-bottom: 50px;
+    padding: 13px 0;
+}
+
+.textbox {
+    width: 100%;
+    overflow: hidden;
+    font-size: 20px;
+    padding: 10px 0;
+    margin: 13px 0;
+    border-bottom: 2px solid #333;
+    justify-content: center;
+}
+
+.textbox input {
+    border: 0;
+    outline: 0;
+    background: none;
+    width: 110px;
+    float: left;
+    color: black;
+    margin: 5px;
+    text-align: center;
+}
+
+.btn {
+    display: inline-block;
+    border-radius: 6px;
+    padding: 12px 25px;
+    box-sizing: border-box;
+    border-color: black;
+    text-decoration: none;
+    color: #333;
+    position: relative;
+    font-family: "Gill Sans MT";
+    border: 2px solid #FFF;
+    margin-top: 20px;
+    margin-left: 80px;
+}
+
+.btn:hover {
+    background-color: rgba(174, 221, 245, 0.3);
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    background: url(Bimages/Bforgetpasswordbg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.forgotpassword-box {
+    width: 280px;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+}
+
+.card {
+    width: 350px;
+    height: 400px;
+    margin-top: 80px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    box-shadow: 0 0 40px 20px rgba(0, 0, 0, 0.26);
+    perspective: 1000px;
+}
+
+.forgotpassword-box h1 {
+    float: left;
+    margin-bottom: 50px;
+    padding: 13px 0;
+}
+
+.textbox {
+    width: 100%;
+    overflow: hidden;
+    font-size: 20px;
+    padding: 10px 0;
+    margin: 13px 0;
+    border-bottom: 2px solid #333;
+    justify-content: center;
+}
+
+.textbox input {
+    border: 0;
+    outline: 0;
+    background: none;
+    width: 110px;
+    float: left;
+    color: black;
+    margin: 5px;
+    text-align: center;
+}
+
+.btn {
+    display: inline-block;
+    border-radius: 6px;
+    padding: 12px 25px;
+    box-sizing: border-box;
+    border-color: black;
+    text-decoration: none;
+    color: #333;
+    position: relative;
+    font-family: "Gill Sans MT";
+    border: 2px solid #FFF;
+    margin-top: 20px;
+    margin-left: 80px;
+}
+
+.btn:hover {
+    background-color: rgba(174, 221, 245, 0.3);
+}

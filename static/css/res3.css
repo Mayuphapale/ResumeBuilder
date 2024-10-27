@@ -1,0 +1,301 @@
+/* #cv-template{
+    display: none;
+} */
+
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: system-ui;
+}
+
+.text1 {
+    text-align: center;
+    margin-left: 550px;
+    font-size: 25px;
+}
+
+.background4 {
+    box-shadow: 1x 1px rgb(46, 45, 45);
+    border-radius: 5px;
+    border-radius: 15x;
+    width: 126px;
+    height: 50px;
+    font-size: 22px;
+    color: white;
+    background-color: rgb(32, 30, 30);
+}
+
+.background4:hover {
+    background-color: #2e59e6;
+    color: rgb(255, 255, 255);
+}
+
+hr {
+    margin-left: 340px;
+}
+
+
+/* .contactinfo p{
+    margin-left: 10px;
+    border-bottom: 1px solid rgb(56, 51, 51);
+} */
+
+.contactinfo ul {
+    position: relative;
+}
+
+.contactinfo ul li {
+    position: relative;
+    list-style: none;
+    cursor: pointer;
+    margin: 10px 0px;
+    /* font-size: 20px; */
+    padding: 10px;
+    margin-left: -36px;
+}
+
+.contactinfo ul li .icon {
+    display: inline-block;
+    /* font-size: 25px; */
+    width: 30px;
+    color: rgb(2, 37, 37);
+}
+
+.clearfix {
+    clear: both;
+}
+
+.main {
+    height: 1150px;
+    width: 1000px;
+    background-color: white;
+    margin: 20px auto;
+}
+
+.top-section {
+    background-color: #151b29;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+}
+
+.profile {
+    width: 150px;
+    border-radius: 70%;
+}
+
+.p1 {
+    color: white;
+    /* font-size: 40px; */
+    font-weight: bold;
+    margin: 0px;
+    margin-top: 10px;
+    text-transform: uppercase;
+}
+
+.p1 span {
+    font-weight: 100;
+    color: #c7c7c7;
+    text-transform: uppercase;
+}
+
+.p2 {
+    /* font-size: 20px; */
+    color: #eee8e8;
+    margin: 0px;
+    margin-top: 10px;
+}
+
+.col-div-4 {
+    width: 35%;
+    float: left;
+}
+
+.col-div-8 {
+    width: 62%;
+    float: left;
+}
+
+.line {
+    border-left: 5px solid #c7c7c7;
+    height: auto;
+    width: 2%;
+    margin-top: 30px;
+    float: left;
+    margin-left: 10px;
+}
+
+.content-box {
+    padding: 16px;
+}
+
+.head {
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.p3 {
+    color: #353232;
+    margin-bottom: -5px;
+    padding: 15px;
+    font-size: 20px;
+}
+
+.fa {
+    color: #151b29;
+}
+
+.skills {
+    margin-left: -20px;
+    margin-bottom: 0px;
+    padding: 40px;
+}
+
+.skills li {
+    padding: 3px;
+}
+
+.skills li span {
+    color: #353232;
+    font-size: 22px;
+    padding: 15px;
+}
+
+.p-4 {
+    font-size: 14px;
+    color: #251c1c;
+    padding: auto;
+}
+
+.edu {
+    padding: 11px;
+    font-size: 23px;
+}
+
+.edu li {
+    padding: 3px;
+}
+
+.para1 {
+    font-size: 22px;
+    padding: 26px;
+}
+
+.para1 li {
+    padding: 10px;
+}
+
+
+/* .btn1{
+    font-size: 30px;
+    background-color: rgb(20, 20, 71);
+    color: mintcream;
+} */
+
+
+/* font size */
+
+.container .buttons {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin-bottom: 20px;
+}
+
+.container .buttons .btn {
+    padding: 7px 13px;
+    display: inline-flex;
+    background: #ddd;
+    margin-left: 10px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.container .buttons .btn.active {
+    background: #444;
+}
+
+.container .buttons .btn:nth-child(2) {
+    font-size: 1.25em;
+}
+
+.container .buttons .btn:nth-child(3) {
+    font-size: 1.55em;
+}
+
+
+/* for fontstyle */
+
+.container .button {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+}
+
+.container .button .btns {
+    padding: 0 10px;
+    display: inline-flex;
+    background: #ddd;
+    color: #fff;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.container .button .btns {
+    background: rgb(122, 25, 25);
+    font-family: 'Modern';
+}
+
+.container .button .btns:nth-child(2) {
+    padding: 5px;
+    font-family: 'Modern';
+}
+
+.container .button .btns:nth-child(3) {
+    padding: 5px;
+    font-family: 'YU Gothic';
+}
+
+.container .button .btns:nth-child(4) {
+    padding: 5px;
+    font-family: 'Nirmala UI';
+}
+
+.container .button .btns:nth-child(5) {
+    padding: 5px;
+    font-family: 'Comic Sans MS';
+}
+
+.container .button .btns:nth-child(6) {
+    padding: 5px;
+    font-family: 'Roman';
+}
+
+.button1 .btns1 {
+    background: rgb(122, 25, 25);
+    color: white;
+}
+
+@media print {
+    body * {
+        visibility: hidden;
+    }
+    #cv-template * {
+        visibility: visible;
+    }
+    #size * {
+        visibility: hidden;
+    }
+    #rowbg * {
+        display: none;
+    }
+    #font * {
+        visibility: hidden;
+    }
+    #prebutton * {
+        display: none;
+    }
+}
