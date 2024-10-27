@@ -266,3 +266,56 @@ function changeFont() {
     var selectedValue = selectbox.options[selectbox.selectedIndex].value;
     document.getElementById('text11').style.fontFamily = selectedValue;
 }
+
+
+
+
+let imgDataUrl = '';
+
+function loadImage(event) {
+  const file = event.target.files[0];
+  const reader = new FileReader();
+  reader.onload = function(e) {
+    imgDataUrl = e.target.result;
+    document.getElementById('imgT').src = imgDataUrl;
+  }
+  reader.readAsDataURL(file);
+}
+
+// Add this event listener to your file input
+document.getElementById('imgfield').addEventListener('change', loadImage);
+function downloadResume() {
+    // Hide elements not needed in the PDF
+    document.getElementById('resume-form').style.display = 'none';
+    document.getElementById('size').style.display = 'none';
+    document.getElementById('font').style.display = 'none';
+    document.getElementById('rowbg').style.display = 'none';
+    document.getElementById('printT').style.display = 'none';
+  
+    // Apply PDF-specific styles (e.g., reduce height or margins)
+    document.getElementById('resume-template').style.display = 'flex';
+    document.getElementById('resume-template').style.padding = '10px'; // Reduce padding
+    document.getElementById('resume-template').style.margin = '0'; // Reduce margins
+    document.getElementById('resume-template').style.fontSize = '13px'; // Smaller font size
+
+    // Use html2pdf library to generate and download the PDF
+    const element = document.getElementById('resume-template');
+    const opt = {
+      margin: 0, // Reduce margin
+      filename: 'resume.pdf',
+      image: { type: 'jpeg', quality: 0.98 },
+      html2canvas: { scale: 1.5, useCORS: true }, // Adjust scale (smaller scale = smaller content)
+      jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+    };
+  
+    // Generate and download the PDF
+    html2pdf().set(opt).from(element).save().then(function() {
+      // Restore the original display states after download
+      document.getElementById('resume-form').style.display = 'block';
+      document.getElementById('size').style.display = 'block';
+      document.getElementById('font').style.display = 'block';
+      document.getElementById('rowbg').style.display = 'block';
+      document.getElementById('printT').style.display = 'block';
+      document.getElementById('resume-template').style.display = 'block';
+    });
+}

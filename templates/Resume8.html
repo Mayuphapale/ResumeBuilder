@@ -188,7 +188,7 @@
     </head>
 
     <body>
-        <div class="container1" style="width: 80%; margin-left: 160px; " id="cv-form">
+        <div class="container1" style="width: 80%; margin-left: 160px; " id="resume-form">
             <h1 class="text-center my-1">Resume Generator</h1>
             <h3 class="text-center" style="color: rgb(97, 88, 88);">Enter Your Details</h3>
             <hr size="5px" width="50%" color="grey">
@@ -538,9 +538,10 @@
                 </div>
 
             </div>
-            <div class="container mt-3 text-center" id="prebutton">
+           
+            <div class="container mt-5 text-center" id="printT">
 
-                <button onclick="printcv()" class="btn btn-primary btn-lg ">Download</button>
+                <button onclick="downloadResume()" class="btn btn-primary btn-lg">Download</button>
 
 
             </div>
@@ -580,5 +581,8 @@
             </script>
 
             <script src="/static/js/res8.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+
     </body>
 </doctype html>
